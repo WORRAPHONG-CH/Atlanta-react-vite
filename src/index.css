@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base{
+    body{
+        /* margin:0; */
+        /* font-family: exo2; */
+        background-color: #faf6f0;
+    }
+}
+
+@layer components{
+    .text-para{
+        @apply text-lg text-center text-slate-500 md:text-xl md:text-left
+    }
+    .text-card{
+        @apply text-sm text-slate-700
+    }
+}
