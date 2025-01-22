@@ -34,8 +34,8 @@ export default function Navbar() {
                             ><FaHome/> Home </Link>
                         </li>
                         <li>
-                            {/* aCareful use <a> instead of <Link>*/}
-                            <Link to="/about"><GrRestaurant/>About</a>
+                            {/* Careful use <a> instead of <Link>*/}
+                            <Link to="/about"><GrRestaurant/>About</Link>
                         </li>
                         <li>
                             <Link to="/menu"><BiSolidFoodMenu/> Menu</Link>
