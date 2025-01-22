@@ -6,10 +6,10 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom';
 
 // component
 import Navbar from './components/navbar';
-import About from './pages/about'
-import Menu from './pages/menu'
-import Home from './pages/home'
-import Reservation from './pages/reservation'
+import About from './pages/About'
+import Menu from './pages/Menu'
+import Home from './pages/Home'
+import Reservation from './pages/Reservation'
 
 export default function App() {
   // const [count, setCount] = useState(0)
@@ -32,17 +32,7 @@ export default function App() {
        {/* Footer */}
        <footer className="py-8 bg-gray-800 text-white text-center">
         <p>{`&copy; 2025 Atlantis Restaurant. All rights reserved.`}</p>
-        <div className="mt-4 flex justify-center gap-4">
-          <a href="#" className="hover:text-orange-400">
-            Facebook
-          </a>
-          <a href="#" className="hover:text-orange-400">
-            Instagram
-          </a>
-          <a href="#" className="hover:text-orange-400">
-            Twitter
-          </a>
-        </div>
+        
       </footer>
     
     </BrowserRouter>
