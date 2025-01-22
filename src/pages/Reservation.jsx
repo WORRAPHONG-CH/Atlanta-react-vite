@@ -46,14 +46,14 @@ export default function Reservation() {
         <h2 className="text-2xl text-center font-semibold text-gray-700 mb-6">
           Fill in Your Details
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4 w-full">
           {/* Date */}
-          <div className="relative">
+          <div className="relative w-full">
             <label htmlFor="date" className="block text-lg font-medium text-gray-700">
               Date
             </label>
-            <div className="relative">
-              <Calendar className="absolute top-3 left-3 text-gray-500" />
+            <div className="relative w-full">
+              <Calendar className="absolute top-2 left-2 text-gray-500" />
               <input
                 type="date"
                 id="date"
@@ -63,12 +63,12 @@ export default function Reservation() {
           </div>
 
           {/* Time */}
-          <div className="relative">
+          <div className="relative w-full">
             <label htmlFor="time" className="block text-lg font-medium text-gray-700">
               Time
             </label>
-            <div className="relative">
-              <Clock className="absolute top-3 left-3 text-gray-500" />
+            <div className="relative w-full">
+              <Clock className="absolute top-2 left-2 text-gray-500" />
               <select
                 id="time"
                 className="pl-10 w-full border border-gray-300 rounded-md p-2 focus:ring-[#E79E4F] focus:border-[#E79E4F]"
@@ -84,12 +84,12 @@ export default function Reservation() {
           </div>
 
           {/* Name */}
-          <div className="relative">
+          <div className="relative w-full">
             <label htmlFor="name" className="block text-lg font-medium text-gray-700">
               Name
             </label>
-            <div className="relative">
-              <User className="absolute top-3 left-3 text-gray-500" />
+            <div className="relative w-full">
+              <User className="absolute top-2 left-2 text-gray-500" />
               <input
                 type="text"
                 id="name"
@@ -100,12 +100,12 @@ export default function Reservation() {
           </div>
 
           {/* Email */}
-          <div className="relative">
+          <div className="relative w-full">
             <label htmlFor="email" className="block text-lg font-medium text-gray-700">
               Email
             </label>
             <div className="relative">
-              <Mail className="absolute top-3 left-3 text-gray-500" />
+              <Mail className="absolute top-2 left-2 text-gray-500" />
               <input
                 type="email"
                 id="email"
@@ -121,7 +121,7 @@ export default function Reservation() {
               Phone
             </label>
             <div className="relative">
-              <Phone className="absolute top-3 left-3 text-gray-500" />
+              <Phone className="absolute top-2 left-2 text-gray-500" />
               <input
                 type="tel"
                 id="phone"
@@ -132,12 +132,12 @@ export default function Reservation() {
           </div>
 
           {/* Address */}
-          <div className="relative">
+          <div className="relative w-full">
             <label htmlFor="address" className="block text-lg font-medium text-gray-700">
               Address
             </label>
             <div className="relative">
-              <MapPin className="absolute top-3 left-3 text-gray-500" />
+              <MapPin className="absolute top-2 left-2 text-gray-500" />
               <textarea
                 id="address"
                 placeholder="Your address"

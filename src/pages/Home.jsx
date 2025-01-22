@@ -41,7 +41,7 @@ const Home = () => {
             by world-class chefs.
           </p>
           <Link
-            href="/menu"
+            to="/menu"
             className="inline-block mt-6 px-8 py-4 text-lg font-semibold text-white bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 transition"
           >
             Explore Our Menu
