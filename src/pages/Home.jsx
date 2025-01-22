@@ -34,7 +34,7 @@ const Home = () => {
           variants={headerVariants}
         >
           <h1 className="text-5xl font-extrabold text-orange-600">
-            Atlantis: Where Taste Meets Art
+            Atlanta: Where Every Bite Tells a Story
           </h1>
           <p className="mt-4 text-lg text-gray-700">
             Experience a fusion of exquisite flavors and creative dishes crafted
