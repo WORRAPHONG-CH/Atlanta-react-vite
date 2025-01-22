@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Utensils, Truck, Wine, Star } from "lucide-react"; // Importing icons
 import hamburger from "../assets/other/sandwich-5930496_1280-Photoroom.png";
-// import About from "../About/about";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

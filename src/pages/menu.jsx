@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { BiSolidFoodMenu } from "react-icons/bi";
 import Reveal from "../components/Reveal";
 
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -19,7 +20,7 @@ export default function Menu() {
   const [countPage, setCountPage] = useState({ foods: 1, desserts: 1, drinks: 1 });
   const [select, setSelect] = useState("foods");
 
-  console.log(limitData)
+  // console.log(limitData)
 
   const fetchApi = async () => {
     try {
@@ -86,36 +87,39 @@ export default function Menu() {
 
   const renderPagination = (type) => (
     <div className="flex justify-center items-center gap-4 mt-5">
-      <button
-        className={`btn btn-sm ${countPage[type] > 1 ? "btn-warning" : "btn-disabled"}`}
-        onClick={() =>
-          setCountPage((prev) => ({ ...prev, [type]: prev[type] - 1 }))
-        }
-      >
-        Previous
-      </button>
+        <button
+          className={`btn btn-sm ${countPage[type] > 1 ? "btn-warning" : "btn-disabled"}`}
+          onClick={() => {
+            setCountPage((prev) => ({ ...prev, [type]: prev[type] - 1 }));
+            document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Previous
+        </button>
       <span className="text-gray-700">
         Page {countPage[type]} of {allPages[type]}
       </span>
-      <button
-        className={`btn btn-sm ${countPage[type] < allPages[type] ? "btn-warning" : "btn-disabled"}`}
-        onClick={() =>
-          setCountPage((prev) => ({ ...prev, [type]: prev[type] + 1 }))
-        }
-      >
-        Next
-      </button>
+      
+        <button
+          className={`btn btn-sm ${countPage[type] < allPages[type] ? "btn-warning" : "btn-disabled"}`}
+          onClick={() => {
+            setCountPage((prev) => ({ ...prev, [type]: prev[type] + 1 }));
+            document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Next
+        </button>
     </div>
   );
 
   return (
-    <motion.div
+    <motion.div 
       className="min-h-screen bg-gray-50 px-5 pb-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <div className="text-center py-8">
+      <div className="text-center py-8" id="menu">
         <h1 className="text-4xl text-orange-500 font-bold  flex items-center justify-center gap-2">
           Menu <BiSolidFoodMenu />
         </h1>
