@@ -25,7 +25,7 @@ export default function Menu() {
   const fetchApi = async () => {
     try {
       const response = await fetch("https://free-food-menus-api-two.vercel.app/all");
-      if (!response.ok) throw new Error("Fetch data failed!");
+      if (!response.ok) throw new Error("Fetch data failed");
       const data = await response.json();
 
       setAllData({

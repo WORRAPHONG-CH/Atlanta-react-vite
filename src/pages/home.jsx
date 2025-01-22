@@ -117,7 +117,7 @@ const Home = () => {
             <Star className="text-orange-500 w-8 h-8 mb-4 mx-auto" />
             <h3 className="text-2xl font-bold text-gray-800">Gourmet Pizza</h3>
             <p className="mt-2 text-gray-600">
-              Handcrafted pizzas with artisanal ingredients.
+              Handcrafted pizzas with thai ingredients.
             </p>
           </div>
         </div>

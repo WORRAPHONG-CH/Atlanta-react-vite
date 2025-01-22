@@ -78,6 +78,7 @@ export default function Reservation() {
                 <option>7:00 PM</option>
                 <option>8:00 PM</option>
                 <option>9:00 PM</option>
+                <option>10:00 PM</option>
               </select>
             </div>
           </div>
