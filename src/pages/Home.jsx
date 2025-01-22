@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Utensils, Truck, Wine, Star } from "lucide-react"; // Importing icons
 import hamburger from "../assets/other/sandwich-5930496_1280-Photoroom.png";
-
+import {Link} from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,12 +40,12 @@ const Home = () => {
             Experience a fusion of exquisite flavors and creative dishes crafted
             by world-class chefs.
           </p>
-          <a
+          <Link
             href="/menu"
             className="inline-block mt-6 px-8 py-4 text-lg font-semibold text-white bg-orange-500 rounded-full shadow-lg hover:bg-orange-600 transition"
           >
             Explore Our Menu
-          </a>
+          </Link>
         </motion.div>
         <motion.div
           className="p-4 lg:w-5/12"
