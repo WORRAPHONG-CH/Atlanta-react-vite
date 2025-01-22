@@ -7,19 +7,19 @@ import { GrRestaurant } from "react-icons/gr";
 import { BiSolidFoodMenu } from "react-icons/bi";
 import { IoRestaurantSharp } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
-import {FaCartShopping} from "react-icons/fa6";
+// import {FaCartShopping} from "react-icons/fa6";
 
-export default function Navbar(props) {
+export default function Navbar() {
     const navStyle ={
         backgroundColor: "#F4EAE0",
     };
 
     // object destructuring
-    const {amountFood} = props; 
+    // const {amountFood} = props; 
     
     return(
         <div className="sticky top-0 z-10">
-            <div className="navbar text-[#4D4D4D] w-screen px-2" style={navStyle}>
+            <div className="navbar text-[#4D4D4D] min-w-screen px-2" style={navStyle}>
 
                 {/* class button link */}
                 <div className="flex-1">
@@ -35,7 +35,7 @@ export default function Navbar(props) {
                         </li>
                         <li>
                             {/* <Link to="/about">About</Link> */}
-                            <a href="#about"><GrRestaurant/>About</a>
+                            <a href="/about"><GrRestaurant/>About</a>
                         </li>
                         <li>
                             <Link to="/menu"><BiSolidFoodMenu/> Menu</Link>
@@ -48,10 +48,10 @@ export default function Navbar(props) {
                 </div>
 
                 {/* Shopping Icon */}
-                <div className="w-full translate-x-14 flex justify-end md:hidden ">
+                {/* <div className="w-full translate-x-14 flex justify-end md:hidden ">
                     <FaCartShopping className="size-7"/>
                     <div className="badge badge-xs badge-warning">{amountFood}</div>
-                </div>
+                </div> */}
 
                 {/* sidebar */}
                 <div className="drawer drawer-end flex justify-end md:hidden">
@@ -68,7 +68,7 @@ export default function Navbar(props) {
                                 ><FaHome/>Home</Link>
                             </li>
                             <li>
-                                <a href="#about"><GrRestaurant/>About</a>
+                                <Link to="/about"><GrRestaurant/>About</Link>
                             </li>
                             <li>
                                 <Link to="/menu"><BiSolidFoodMenu/>Menu</Link>

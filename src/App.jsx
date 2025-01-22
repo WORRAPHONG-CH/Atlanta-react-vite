@@ -1,41 +1,49 @@
 import './index.css'
 
 // lib
-import {useState} from "react";
+// import {useState} from "react";
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 
 // component
-import Navbar from './components/Navbar/navbar';
-import About from './components/About/about'
-import Menu from './components/Menu/menu'
-import Home from './components/Home/home'
-import Reservation from './components/Reservation/reservation'
+import Navbar from './components/navbar';
+import About from './pages/About'
+import Menu from './pages/menu'
+import Home from './pages/home'
+import Reservation from './pages/reservation'
 
 export default function App() {
   // const [count, setCount] = useState(0)
-  const [amountFood,setAmountFood] = useState(0);
-
-  // function 
-  const getAmountFood = (newAmount) =>{
-    // console.log(newAmount)
-    setAmountFood(newAmount);
-    
-  }
+  
 
   return (
     <BrowserRouter>
       {/* กำหนดวาง Navbar component ไว้เหนือ Content แต่ละ Page*/}
       
-      <Navbar amountFood={amountFood}/>
+      <Navbar />
       {/* กำนหนดเส้นทาง Page Route  */}
         <Routes>
             {/* หน้าแรก path ไม่ต้องกำหนดอะไร*/}
             <Route path="" element={<Home/>}/>
             <Route path="about" element={<About/>}/>
-            <Route path="menu" element={<Menu getAmountFood={getAmountFood}/>}/>
+            <Route path="menu" element={<Menu />}/>
             <Route path="reservation" element={<Reservation/>}/>
         </Routes>
         
+       {/* Footer */}
+       <footer className="py-8 bg-gray-800 text-white text-center">
+        <p>{`&copy; 2025 Atlantis Restaurant. All rights reserved.`}</p>
+        <div className="mt-4 flex justify-center gap-4">
+          <a href="#" className="hover:text-orange-400">
+            Facebook
+          </a>
+          <a href="#" className="hover:text-orange-400">
+            Instagram
+          </a>
+          <a href="#" className="hover:text-orange-400">
+            Twitter
+          </a>
+        </div>
+      </footer>
     
     </BrowserRouter>
     
